@@ -277,3 +277,23 @@
 .link-a:hover{
     color: rgb(212, 58, 58);
 }
+
+/* Tela dashboards */
+.container-cardFilter{
+    background-color: transparent;
+}
+
+.label-filters{
+    color: rgba(205, 205, 205);
+} 
+
+.Select-control{
+    background: #131313;
+}
+
+.Select-value{
+    background-color: rgb(212, 58, 58);
+}
+.card-card{
+    background-color: #161616;
+}
