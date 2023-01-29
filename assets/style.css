@@ -285,6 +285,9 @@
 
 .label-filters{
     color: rgba(205, 205, 205);
+    font-size: 20px;
+    font-size: 400;
+    letter-spacing: 2px;
 } 
 
 .Select-control{
@@ -304,4 +307,9 @@
 
 .main-svg{
     background-color: #0000002a;
+}
+
+.desc-locacao{
+    padding: 5px;
+    text-align: center;
 }

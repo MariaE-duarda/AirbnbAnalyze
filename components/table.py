@@ -15,7 +15,7 @@ import pandas as pd
 popover_down = "Fazer download da base de dados."
 
 df = pd.read_csv('airbnbJP.csv')
-df = df.sort_values('estrelas', ascending=False)
+df = df.sort_values('preco_por_noite', ascending=True)
 
 layout = dbc.Col([
     dbc.Row([
@@ -53,7 +53,7 @@ layout = dbc.Col([
                     style_header={ 'border': '1px solid #1a1a1a', 'background':'transparent', 'color':'rgb(212, 58, 58)', 'text-align':'center', 'font-weight':'400'},
                     filter_action='native',
                     style_cell={ 'border': '1px solid #1c1c1c', 'textAlign': 'left', 'background-color':'transparent', 'color':'white'},
-                    page_size=3,     
+                    page_size=5,     
                     style_data={
                         'whiteSpace': 'normal',
                         'height': 'auto', 'color':'rgb(204, 204, 204)'
