@@ -56,7 +56,7 @@ layout = dbc.Col([
     dbc.Button(id="open", n_clicks=0, className='btn-code fa fa-code'),
     dbc.Modal([
         dbc.ModalHeader(dbc.ModalTitle("Link para o código")),
-        dbc.ModalBody("link....."),
+        dbc.ModalBody("https://github.com/MariaE-duarda/AirbnbAnalyze"),
         dbc.ModalFooter(
         dbc.Button(
             "Fechar", id="close", className="ms-auto btn-fechar", n_clicks=0

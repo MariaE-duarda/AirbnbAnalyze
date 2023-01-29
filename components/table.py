@@ -12,8 +12,6 @@ import plotly.express as px
 import numpy as np
 import pandas as pd
 
-popover_down = "Fazer download da base de dados."
-
 df = pd.read_csv('airbnbJP.csv')
 df = df.sort_values('preco_por_noite', ascending=True)
 
@@ -33,16 +31,10 @@ layout = dbc.Col([
         dbc.Col([
             html.H1(html.I(' Dados trabalhados', className='subtitle-intro'), className='fa fa-long-arrow-left tag-text'),
             html.Br(),
-            html.Button("Download CSV", id="btn_xlsx hover-target4", className='btn-download me-1',
+            html.Button("Download CSV", id="btn_xlsx", className='btn-download me-1',
             n_clicks=0),
             html.Button(html.A('Site usado', href='https://www.airbnb.com.br/s/Jo%C3%A3o-Pessoa--Brasil/homes?adults=1&place_id=ChIJsfXbGgborAcRI1xwKg981_0&refinement_paths%5B%5D=%2Fhomes', className='link-a'), className='btn-download'),
-            dcc.Download(id="download-dataframe-xlsx"),  
-            dbc.Popover(
-            popover_down,
-            target="hover-target4",
-            body=True,
-            trigger="hover",
-        ), 
+            dcc.Download(id="download-dataframe-xlsx") 
         ])
     ]),
     dbc.Row([ 
@@ -69,4 +61,4 @@ layout = dbc.Col([
     prevent_initial_call=True,
 )
 def func(n_clicks):
-    return dcc.send_data_frame(df.to_excel, "airbnbJp.csv", sheet_name="Sheet_name_1")
+    return dcc.send_data_frame(df.to_excel, "airbnbjp.csv", sheet_name="Sheet_name_1")
