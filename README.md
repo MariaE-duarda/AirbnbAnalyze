@@ -20,6 +20,10 @@
   <img src="https://github.com/MariaE-duarda/AirbnbAnalyze/blob/main/assets/web%20scraping.png?raw=true" />
 </div>
 
+<div align="center">
+  <img scr="https://github.com/MariaE-duarda/AirbnbAnalyze/blob/main/assets/dados.png?raw=true />
+</div>
+
 <p align="center">done with 💖 per:</p>
 
 <div align="center">
