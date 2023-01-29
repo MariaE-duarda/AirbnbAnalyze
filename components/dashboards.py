@@ -7,24 +7,29 @@ import dash_bootstrap_components as dbc
 from dash import Input, Output, html, no_update
 from app import app
 from dash_bootstrap_templates import ThemeSwitchAIO
+import dash_bootstrap_templates as dbt
+import plotly.graph_objects as go
 
 from datetime import datetime, date
 import plotly.express as px
 import numpy as np
 import pandas as pd
 
+template_theme1 = "darkly"
+url_theme1 = dbc.themes.DARKLY
+
 df = pd.read_csv('airbnbJP.csv')
 df = df.sort_values('estrelas', ascending=False)
 
 cama = df.groupby('quantidade_cama').sum().reset_index()
+estrelas = df.groupby('estrelas').sum().reset_index()
 name = df.groupby(['estrelas'])['quantidade_cama'].sum()
 pnoite = df.groupby('preco_por_noite').sum().reset_index().head(5)
 
 fig = px.bar(cama, x='quantidade_cama', y='preco_por_noite')
 fig_pizza = px.pie(
-    pnoite, values='quantidade_cama', 
+    pnoite, values='quantidade_avaliacoes', 
     names='preco_por_noite', hole=.3)
-
 
 layout = dbc.Col([
     dbc.Row([
@@ -74,21 +79,34 @@ layout = dbc.Col([
                 ) 
             ], style={'padding':'5px'}, className='card-card')
           ], className='container-cardFilter')
-        ], width=3),
+        ], width=3, className='card-margin'),
         dbc.Col([
             dbc.Card([ 
                 dcc.Graph(id='graph1', figure=fig)
-            ])
+            ], style={'margin-left':'-5px'})
         ], width=5),
         dbc.Col([ 
             dbc.Card([
                 dcc.Graph(id='graph2', figure=fig_pizza)
-            ])
+            ], style={'margin-left':'-5px'})
         ], width=4)
     ]),
     dbc.Row([ 
         dbc.Col([
-        ])
+            dbc.Card([
+                html.H2('Locação mais cara:'),
+            ], className='desc-locacao')
+        ], width=4, className='card-margin'),
+        dbc.Col([
+            dbc.Card([
+                html.H2('Locação mais barata:') ,
+            ], style={'margin-left':'-5px'}, className='desc-locacao')
+        ], width=4), 
+        dbc.Col([
+            dbc.Card([
+                dcc.Graph()
+            ], style={'margin-left':'-5px'})
+        ], width=4)
     ])
 ])
 
@@ -107,11 +125,22 @@ def ind1(bed, star):
 
     cama = df_geral.groupby('quantidade_cama').sum().reset_index()
     name = df_geral.groupby(['estrelas'])['quantidade_cama'].sum()
-    pnoite = df_geral.groupby('preco_por_noite').sum().reset_index().head(5)
+    estrelas = df.groupby('estrelas').sum().reset_index()
+    pnoite = df_geral.groupby('preco_por_noite').sum().reset_index().head(7)
 
     fig = px.bar(cama, x='quantidade_cama', y='preco_por_noite')
     fig_pizza = px.pie(
-        pnoite, values='quantidade_cama', 
-        names='preco_por_noite', hole=.3)
+        pnoite, values='quantidade_avaliacoes', 
+        names='preco_por_noite', hole=.3, 
+        color_discrete_sequence=px.colors.sequential.RdBu)
+
+    fig.update_traces(marker_color='rgb(212, 58, 58)', marker_line_color='rgb(212, 58, 58)')
+    
+    fig.update_layout(margin={"l":30, "r":30, "t":20, "b":20}, height=300, 
+        xaxis_title='Quantidade de Camas',
+        yaxis_title='Preço por Noite', 
+        template = 'plotly_white', 
+        plot_bgcolor='#131313')
+    fig_pizza.update_layout(margin={"l":30, "r":30, "t":20, "b":20}, height=300)
 
     return fig, fig_pizza

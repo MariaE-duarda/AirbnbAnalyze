@@ -212,7 +212,7 @@
 }
 
 .card-margin{
-    margin-left: -20px;
+    margin-left: -15px;
 }
 
 .cor-fundo{
@@ -296,4 +296,12 @@
 }
 .card-card{
     background-color: #161616;
+}
+
+.user-select-none .svg-container{
+    border-radius: 10px;
+}
+
+.main-svg{
+    background-color: #0000002a;
 }
