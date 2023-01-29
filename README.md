@@ -17,7 +17,7 @@
 <br><br>
 
 <div align="center">
-  <img src="https://github.com/MariaE-duarda/DevRdm/blob/main/public/img/randomDevScreen.png?raw=true" />
+  <img src="https://github.com/MariaE-duarda/AirbnbAnalyze/blob/main/assets/web%20scraping.png?raw=true" />
 </div>
 
 <p align="center">done with 💖 per:</p>
