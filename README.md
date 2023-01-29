@@ -1,26 +1,17 @@
 <div align="center">
-  <img height="80" src="https://github.com/MariaE-duarda/DevRdm/blob/main/public/img/RandomDev.png?raw=true">
+  <img height="80" src="https://github.com/MariaE-duarda/AirbnbAnalyze/blob/main/assets/Airbnb%20Review.png?raw=true">
 </div>
 
 <div align = "center">
-  <h3 align="center">☁️💜 Description 💜☁️</h3>
-  <p>It is a project developed for the web development discipline. It is a random application, it does not have a specific objective. The focus, in my case, is to study the front-end part in more depth.</p>
+  <h3 align="center">☁️💘 Description 💘☁️</h3>
+  <p>Dashboard created in the IT Topics class, using data scraping on the Airbnb João Pessoa website and analysis of the collected data.</p>
 </div> 
 
+<h3 align="center">☁️💘 Technologies 💘☁️</h3>
 <div align="center">
- <a href="https://mariae-duarda.github.io/DevRdm/"><img height="60" src="https://user-images.githubusercontent.com/92947069/162238723-d9323276-f218-4416-a91a-f7808204279d.png" /></a>
-</div>
-
-<h3 align="center">☁️💜 Technologies 💜☁️</h3>
-<div align="center">
-  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />&nbsp
-  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />&nbsp
-  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />&nbsp
-  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />&nbsp
-  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />&nbsp
-  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" />&nbsp
-  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" />&nbsp
-  <img height="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />          
+  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />&nbsp
+  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" />&nbsp
+  <img height="59" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" />&nbsp      
 </div>
 
 <br><br>
